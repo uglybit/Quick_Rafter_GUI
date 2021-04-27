@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/background.PNG</file>
+        <file>res/CommonRafterDistance.PNG</file>
+        <file>res/CommonResult.PNG</file>
+        <file>res/GableResult.PNG</file>
+        <file>res/GableRoofLength.PNG</file>
+        <file>res/PurlinDimensions.PNG</file>
+        <file>res/PurlinPropDimensions.PNG</file>
+        <file>res/Rafter.PNG</file>
+        <file>res/RafterDimensions.PNG</file>
+        <file>res/RED.PNG</file>
+        <file>res/ResultCommonRafter.PNG</file>
+        <file>res/ResultHipAxis.PNG</file>
+        <file>res/ResultHippedFront.PNG</file>
+        <file>res/ResultHipRafter.PNG</file>
+        <file>res/ResultHipSideView.PNG</file>
+        <file>res/resultPurlinProp.PNG</file>
+        <file>res/ResultTrussFront.PNG</file>
+        <file>res/ResultTrussProfile.PNG</file>
+        <file>res/ResultWallPlate.PNG</file>
+        <file>res/Truss_dimm_enter.PNG</file>
+        <file>res/WallPlateDimensions.PNG</file>
+    </qresource>
+</RCC>
