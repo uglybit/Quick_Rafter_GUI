@@ -7,7 +7,6 @@ Truss::Truss(QWidget *parent, Dimensions* dimens) :
     QDialog(parent), dimensions(dimens)
 {
     WallPlate* newElement = new WallPlate(this, dimens);
-    //elements.push_back(newElement);
     addElementToTruss(newElement);
     connect(newElement, &Element::elementIsSet, this, &Truss::wallPlateIsSet);
     connect(newElement, &Element::elementRejected, this, &Truss::on_wallPlateReject);
@@ -30,12 +29,11 @@ TrussType Truss::type() const
 
 void Truss::wallPlateIsSet()
 {
-    qDebug() << "odebrano wall plate is set";
+    qDebug() << "Received signal: wall plate is set";
     qDebug() << "wall plate level: " << getDimensions()->getWallPlateHeight();
     qDebug() << "width: " << elements[0]->getWidth();
     qDebug() << "height: " << elements[0]->getHeight();
     CommonRafter* newElement = new CommonRafter(this, dimensions);
-    //elements.push_back(newElement);
     addElementToTruss(newElement);
     connect(newElement, &Element::elementIsSet, this, &Truss::commonRafterIsSet);
     connect(newElement, &Element::elementRejected, this, &Truss::on_commonRafterReject);
@@ -44,7 +42,7 @@ void Truss::wallPlateIsSet()
 
 void Truss::commonRafterIsSet()
 {
-    qDebug() << "odebrano common rafter is set: ";
+    qDebug() << "Received signal: common rafter is set: ";
     qDebug() << getDimensions()->getCommonRafterHeight();
     qDebug() << getDimensions()->getCommonRafterWidth();
     qDebug() << getDimensions()->getCommonRaftersDistance();
@@ -54,7 +52,7 @@ void Truss::commonRafterIsSet()
 
 void Truss::on_commonRafterReject()
 {
-    qDebug() << "odebralem sygnal common reject";
+    qDebug() << "Received signal: common reject";
     qDebug() << elements.back();
     removeLastElement();
     elements.back()->show();
@@ -62,7 +60,7 @@ void Truss::on_commonRafterReject()
 
 void Truss::on_wallPlateReject()
 {
-    qDebug() << "odebralem wall plate reject";
+    qDebug() << "Received signal: wall plate reject";
     removeLastElement();
     emit trussIsRejected();
 }
@@ -78,7 +76,6 @@ Element* Truss::getLastElement()
         return elements.back();
     }
     else {
-        // message box?
         return nullptr;
     }
 
@@ -92,7 +89,6 @@ Element* Truss::getElement(unsigned position)
     else {
         return nullptr;
     }
-
 }
 
 int Truss::size()

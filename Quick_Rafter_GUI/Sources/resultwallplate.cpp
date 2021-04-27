@@ -31,8 +31,8 @@ void ResultWallPlate::setView()
 {
     setFixedSize(954,640);
     QMap<QString, double> parameters = wallPlate->getParameters();
-    ui->wallPlateHeight->setText(QString::number(parameters["Height"]));
-    ui->wallPlateWidth->setText(QString::number(parameters["Width"]));
-    ui->wallPlateLength->setText(QString::number(wallPlate->getDimensions()->getTrussLength()));
+    ui->wallPlateHeight->setText(QString::number(parameters["Height"], 'f', 2));
+    ui->wallPlateWidth->setText(QString::number(parameters["Width"], 'f', 2));
+    ui->wallPlateLength->setText(QString::number(wallPlate->getDimensions()->getTrussLength(), 'f', 2));
 }
 

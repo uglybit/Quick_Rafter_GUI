@@ -25,16 +25,16 @@ void ResultCommonRafter::setView()
 {
     setFixedSize(954,640);
     QMap<QString, double> parameters = commonRafter->getParameters();
-    ui->verticalLine->setText(QString::number(parameters["Vertical line"]));
-    ui->horizotalLine->setText(QString::number(parameters["Horizontal line"]));
-    ui->verticalCut->setText(QString::number(parameters["Vertical cut"]));
-    ui->horizontalCut->setText(QString::number(parameters["Horizontal cut"]));
+    ui->verticalLine->setText(QString::number(parameters["Vertical line"], 'f', 2));
+    ui->horizotalLine->setText(QString::number(parameters["Horizontal line"], 'f', 2));
+    ui->verticalCut->setText(QString::number(parameters["Vertical cut"], 'f', 2));
+    ui->horizontalCut->setText(QString::number(parameters["Horizontal cut"], 'f', 2));
 
-    ui->eaveToWallPlate->setText(QString::number(parameters["Eave to wall plate"]));
-    ui->wallPlateToPurlin->setText(QString::number(parameters["Wall plate to purlin"]));
-    ui->purlinToTop->setText(QString::number(parameters["Purlin to top"]));
-    ui->totalLength->setText(QString::number(parameters["Rafter total length"]));
-    ui->betaAngle->setText(QString::number(parameters["Beta angle"]));
+    ui->eaveToWallPlate->setText(QString::number(parameters["Eave to wall plate"], 'f', 2));
+    ui->wallPlateToPurlin->setText(QString::number(parameters["Wall plate to purlin"], 'f', 2));
+    ui->purlinToTop->setText(QString::number(parameters["Purlin to top"], 'f', 2));
+    ui->totalLength->setText(QString::number(parameters["Rafter total length"], 'f', 2));
+    ui->betaAngle->setText(QString::number(parameters["Beta angle"], 'f', 2));
 }
 
 void ResultCommonRafter::setPrintGeometry()

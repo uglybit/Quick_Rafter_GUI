@@ -41,30 +41,30 @@ void ResultHipRafter::setProfileView()
         ++i;
     }
 
-    ui->HipHeight->setText(QString::number(params["Height"]));
+    ui->HipHeight->setText(QString::number(params["Height"], 'f', 2));
     ui->hipWidth->setText(QString::number(params["Width"]));
 
-    ui->angleHorizontalCut->setText(QString::number(params["Angle cut to square"]));
-    ui->horizontalCutInside->setText(QString::number(params["Horizontal cut to square"]));
-    ui->horizontalCutOutside->setText(QString::number(params["Horizontal cut"]));
-    ui->horizontalLine->setText(QString::number(params["Horizontal line"]));
-    ui->verticalCutInside->setText(QString::number(params["Vertical cut to square"]));
+    ui->angleHorizontalCut->setText(QString::number(params["Angle cut to square"], 'f', 2));
+    ui->horizontalCutInside->setText(QString::number(params["Horizontal cut to square"], 'f', 2));
+    ui->horizontalCutOutside->setText(QString::number(params["Horizontal cut"], 'f', 2));
+    ui->horizontalLine->setText(QString::number(params["Horizontal line"], 'f', 2));
+    ui->verticalCutInside->setText(QString::number(params["Vertical cut to square"], 'f', 2));
 
-    ui->verticalCutOutside->setText(QString::number(params["Vertical cut"]));
-    ui->verticalLine->setText(QString::number(params["Vertical line"]));
+    ui->verticalCutOutside->setText(QString::number(params["Vertical cut"], 'f', 2));
+    ui->verticalLine->setText(QString::number(params["Vertical line"], 'f', 2));
 
 }
 
 void ResultHipRafter::setAxisView()
 {
     QMap<QString, double> params = hipRafter->getParameters();
-    ui->alphaAngle->setText(QString::number(params["Alpha angle"]));
-    ui->betaAngle->setText(QString::number(params["Beta angle"]));
-    ui->eaveLength->setText(QString::number(params["Horizontal eave length"]));
-    ui->eaveToWallPlate->setText(QString::number(params["Eave to wall plate"]));
-    ui->purlinToTop->setText(QString::number(params["Purlin to top"]));
-    ui->totalLength->setText(QString::number(params["Rafter total length"]));
-    ui->wallPlateToPurlin->setText(QString::number(params["Wall plate to purlin"]));
-    ui->wallPlateToTop->setText(QString::number(params["Wall plate to top"]));
+    ui->alphaAngle->setText(QString::number(params["Alpha angle"], 'f', 2));
+    ui->betaAngle->setText(QString::number(params["Beta angle"], 'f', 2));
+    ui->eaveLength->setText(QString::number(params["Horizontal eave length"], 'f', 2));
+    ui->eaveToWallPlate->setText(QString::number(params["Eave to wall plate"], 'f', 2));
+    ui->purlinToTop->setText(QString::number(params["Purlin to top"], 'f', 2));
+    ui->totalLength->setText(QString::number(params["Rafter total length"], 'f', 2));
+    ui->wallPlateToPurlin->setText(QString::number(params["Wall plate to purlin"], 'f', 2));
+    ui->wallPlateToTop->setText(QString::number(params["Wall plate to top"], 'f', 2));
 }
 

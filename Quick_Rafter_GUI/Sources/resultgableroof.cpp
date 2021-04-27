@@ -21,17 +21,17 @@ void ResultGableRoof::setFrontView()
     double value;
     value = truss->getDimensions()->getBuildingLength();
     QLabel* labelBuilding = bulidingLengthLabel();
-    labelBuilding->setText(QString::number(value));
+    labelBuilding->setText(QString::number(value, 'f', 2));
 
     value = truss->getDimensions()->getTrussLength();
     QLabel* labelTruss = trussLengthLabel();
-    labelTruss->setText(QString::number(value));
+    labelTruss->setText(QString::number(value, 'f', 2));
 
     value = truss->getDimensions()->getCommonRaftersDistance();
     QLabel* labelRafter = rafterDistanceLabel();
-    labelRafter->setText(QString::number(value));
+    labelRafter->setText(QString::number(value, 'f', 2));
 
     value = truss->getDimensions()->getRoofSurfaceArea();
     QLabel* labelSurfaceArea = roofSurfaceLabel();
-    labelSurfaceArea->setText(QString::number(value));
+    labelSurfaceArea->setText(QString::number(value, 'f', 2));
 }

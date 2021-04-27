@@ -31,25 +31,25 @@ void ResultTruss::setProfileView()
     ui->profileBuildingWidth->setText(QString::number(value, 'f', 2));
 
     value = truss->getDimensions()->getHorizontalEaveLength();
-    ui->profileEaveLength->setText(QString::number(value));
+    ui->profileEaveLength->setText(QString::number(value, 'f', 2));
 
     value = truss->getDimensions()->getPurlinPropDistance();
-    ui->profilePropDistance->setText(QString::number(value));
+    ui->profilePropDistance->setText(QString::number(value, 'f', 2));
 
     value = truss->getDimensions()->getPurlinLevel();
     ui->profilePurlinLevel->setText(QString::number(value, 'f', 2));
 
     value = truss->getDimensions()->getCommonRafterHeight();
-    ui->profileRafterHeight->setText(QString::number(value));
+    ui->profileRafterHeight->setText(QString::number(value, 'f', 2));
 
     value = truss->getDimensions()->getCommRaftTotalLength();
-    ui->profileRafterLength->setText(QString::number(value));
+    ui->profileRafterLength->setText(QString::number(value, 'f', 2));
 
     value = truss->getDimensions()->getTrussHeight();
-    ui->profileTrussHeight->setText(QString::number(value));
+    ui->profileTrussHeight->setText(QString::number(value, 'f', 2));
 
     value = truss->getDimensions()->getWallPlateHeight();
-    ui->profileWallPlate->setText(QString::number(value));
+    ui->profileWallPlate->setText(QString::number(value, 'f', 2));
 }
 
 QLabel *ResultTruss::trussLengthLabel()

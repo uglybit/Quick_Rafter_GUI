@@ -25,9 +25,9 @@ void ResultPurlinProp::setView()
 {
     setFixedSize(954,640);
     QMap<QString, double> parameters = purlinProp->getParameters();
-    ui->purlinPropHeight->setText(QString::number(parameters["Height"]));
-    ui->purlinPropWidth->setText(QString::number(parameters["Width"]));
-    ui->purlinPropLength->setText(QString::number(purlinProp->getDimensions()->getPurlinPropLength()));
+    ui->purlinPropHeight->setText(QString::number(parameters["Height"], 'f', 2));
+    ui->purlinPropWidth->setText(QString::number(parameters["Width"], 'f', 2));
+    ui->purlinPropLength->setText(QString::number(purlinProp->getDimensions()->getPurlinPropLength(), 'f', 2));
 }
 
 void ResultPurlinProp::setPrintGeometry()

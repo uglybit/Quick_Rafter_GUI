@@ -20,7 +20,7 @@ void ResultHippedRoof::setFrontView()
 {
     double value = truss->getDimensions()->getBuildingLength();
     QLabel* labelBuilding = bulidingLengthLabel();
-    labelBuilding->setText(QString::number(value));
+    labelBuilding->setText(QString::number(value, 'f', 2));
     int posY = labelBuilding->geometry().y();
     QRect rect = labelBuilding->geometry();
     rect.setY(posY - 13);
@@ -28,7 +28,7 @@ void ResultHippedRoof::setFrontView()
 
     value = truss->getDimensions()->getTrussLength();
     QLabel* labelTruss = trussLengthLabel();
-    labelTruss->setText(QString::number(value));
+    labelTruss->setText(QString::number(value, 'f', 2));
     posY = labelTruss->geometry().y();
     rect = labelTruss->geometry();
     rect.setY(posY + 8);
@@ -36,7 +36,7 @@ void ResultHippedRoof::setFrontView()
 
     value = truss->getDimensions()->getCommonRaftersDistance();
     QLabel* labelRafter = rafterDistanceLabel();
-    labelRafter->setText(QString::number(value));
+    labelRafter->setText(QString::number(value, 'f', 2));
     labelRafter->setGeometry(300, 30, 81, 31);
 
     QLabel* labelPic = pictureLabel();
@@ -46,6 +46,6 @@ void ResultHippedRoof::setFrontView()
 
     value = truss->getDimensions()->getRoofSurfaceArea();
     QLabel* labelSurfaceArea = roofSurfaceLabel();
-    labelSurfaceArea->setText(QString::number(value));
+    labelSurfaceArea->setText(QString::number(value, 'f', 2));
 
 }
