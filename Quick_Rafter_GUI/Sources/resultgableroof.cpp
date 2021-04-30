@@ -1,11 +1,12 @@
 #include "../Headers/resultgableroof.h"
-#include "ui_resultgableroof.h"
+//#include "ui_resultgableroof.h"
 
 ResultGableRoof::ResultGableRoof(QWidget *parent, Truss* t) :
     ResultTruss(parent, t),
-    ui(new Ui::ResultGableRoof), truss(t)
+   // ui(new Ui::ResultGableRoof),
+    truss(t)
 {
-    ui->setupUi(this);
+   // ui->setupUi(this);
     QSize windowSize = size();
     setFixedSize(windowSize);
     setFrontView();
@@ -13,7 +14,7 @@ ResultGableRoof::ResultGableRoof(QWidget *parent, Truss* t) :
 
 ResultGableRoof::~ResultGableRoof()
 {
-    delete ui;
+    //delete ui;
 }
 
 void ResultGableRoof::setFrontView()

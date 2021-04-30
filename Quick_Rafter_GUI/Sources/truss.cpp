@@ -1,5 +1,5 @@
 #include "../Headers/truss.h"
-#include "ui_truss.h"
+//#include "ui_truss.h"
 
 #include <QDebug>
 
