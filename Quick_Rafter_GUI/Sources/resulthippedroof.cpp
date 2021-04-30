@@ -1,5 +1,5 @@
 #include "../Headers/resulthippedroof.h"
-#include "ui_resulthippedroof.h"
+//#include "ui_resulthippedroof.h"
 
 ResultHippedRoof::ResultHippedRoof(QWidget *parent, Truss* t) :
     ResultTruss(parent, t),
